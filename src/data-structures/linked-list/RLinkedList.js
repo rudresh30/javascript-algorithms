@@ -62,6 +62,26 @@ class RLinkedList {
             currentNode = currentNode.next;
         }
     }
+
+    deleteTail() {
+        console.log('performing dequeue');
+        let currentNode = this.head;
+        let prevNode = this.head;
+        while (currentNode.next !== null) {
+            prevNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        prevNode.next = null;
+        this.tail = prevNode;
+    }
+
+    deleteHead() {
+        console.log(`popping first value`);
+        let headNode = this.head;
+        this.head = this.head.next;
+        headNode.next = null;
+        return headNode.value;
+    }
 }
 
 module.exports = RLinkedList;

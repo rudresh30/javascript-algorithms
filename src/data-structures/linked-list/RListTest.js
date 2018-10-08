@@ -16,10 +16,11 @@ valArray.forEach(element => {
 myList.traverseList();
 
 myList.addHead(0);
-
 myList.traverseList();
 
 myList.deleteNode(45);
+myList.traverseList();
 
+myList.deleteTail();
 myList.traverseList();
 
