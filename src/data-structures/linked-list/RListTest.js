@@ -1,8 +1,25 @@
-import RLinkedList from "./RLinkedList";
+var RLinkedList = require("./RLinkedList");
 
-function createList() {
-    console.log(`creating empty list`);
-    return new RLinkedList();
-}
+//create list
 
-function insertList()
+var myList = new RLinkedList();
+
+myList.addNode(45);
+
+var valArray = [12, 45, 23, 34, 45];
+
+valArray.forEach(element => {
+    myList.addNode(element);
+});
+
+
+myList.traverseList();
+
+myList.addHead(0);
+
+myList.traverseList();
+
+myList.deleteNode(45);
+
+myList.traverseList();
+
